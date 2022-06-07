@@ -13,13 +13,13 @@ public class Testing {
 
 
     @Test
-    public static void isString(){
+    public void isString(){
         String s = null;
         Assertions.assertSame(Calculations.availablePeriods(STARTTIMES,DURATIONS,BEGINWOORKINGTIME,ENDWORKINGTIME,consultationTime), s);
     }
 
     @Test
-    public static void notNull(){
+    public void notNull(){
         Assertions.assertNotNull(Calculations.availablePeriods(STARTTIMES,DURATIONS,BEGINWOORKINGTIME,ENDWORKINGTIME,consultationTime));
     }
 
