@@ -13,9 +13,22 @@ public class Testing {
 
 
     @Test
-    public void isString(){
-        String s = null;
-        Assertions.assertSame(Calculations.availablePeriods(STARTTIMES,DURATIONS,BEGINWOORKINGTIME,ENDWORKINGTIME,consultationTime), s);
+    public void isData(){
+        String s = "08:00-08:30\n" +
+                "08:30-09:00\n" +
+                "09:00-09:30\n" +
+                "09:30-10:00\n" +
+                "11:30-12:00\n" +
+                "12:00-12:30\n" +
+                "12:30-13:00\n" +
+                "13:00-13:30\n" +
+                "13:30-14:00\n" +
+                "14:00-14:30\n" +
+                "14:30-15:00\n" +
+                "15:40-16:10\n" +
+                "16:10-16:40\n" +
+                "17:30-18:00";
+        Assertions.assertTrue(Calculations.availablePeriods(STARTTIMES,DURATIONS,BEGINWOORKINGTIME,ENDWORKINGTIME,consultationTime).equals(s));
     }
 
     @Test
